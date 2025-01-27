@@ -1,0 +1,108 @@
+.footer {
+  background-image: url(../img/header/bgc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.footer_wrapper {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  @include media-laptop {
+    max-width: 1000px;
+    flex-wrap: wrap;
+    column-gap: 61px;
+    justify-content: space-around;
+  }
+  @include media-laptop {
+    max-width: 708px;
+    padding-top: 15px;
+    justify-content: center;
+  }
+  @include media-mobile-L {
+    max-width: 300px;
+    padding: 12px 0 0;
+  }
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  @include media-laptop {
+    padding-bottom: 23px;
+  }
+  @include media-mobile-L {
+    align-items: center;
+    &:nth-child(2) {
+      align-items: start;
+      padding-bottom: 40px;
+    }
+  }
+}
+.footer__title {
+  max-width: 280px;
+  color: $color-light-xl;
+  padding: 16px 0 34px;
+  @include media-mobile-L {
+    max-width: 260px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: auto;
+    letter-spacing: 0.06em;
+  }
+  &.contacts {
+    padding-bottom: 39px;
+  }
+}
+.footer__title.mobile-l {
+  @include media-mobile-L {
+    padding: 16px 0 44px;
+  }
+}
+
+.footer__link {
+  @include font(2rem, 115%);
+  @extend %font-add;
+  @extend %transition;
+  max-width: 302px;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+
+  &.map {
+    padding-bottom: 33px;
+    @include media-laptop {
+      padding-bottom: 35px;
+      margin-top: -5px;
+      margin-right: 2px;
+    }
+    @include media-mobile-L {
+      padding-bottom: 40px;
+    }
+  }
+  &:hover {
+    color: $color-primary-light;
+  }
+  @include media-mobile-L {
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+.footer__icon {
+  padding-right: 20px;
+}
+
+.footer__img {
+  @include media-mobile-L {
+    width: 260px;
+    height: 269px;
+  }
+}
+.footer__title.pets_page {
+  @include media-mobile-L {
+    padding-bottom: 45px;
+  }
+}

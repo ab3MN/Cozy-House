@@ -1,0 +1,25 @@
+//Abstract
+@import './abstract/constants';
+@import './abstract/mixin';
+@import './abstract/placeholders';
+
+//Base
+@import './base/base';
+@import './base/normalize';
+@import './base/hamburger';
+
+//Components
+@import './components/abouts';
+@import './components/dontation';
+@import './components/footer';
+@import './components/header';
+@import './components/help';
+@import './components/pets';
+@import './components/screen';
+@import './components/slider';
+@import './components/singelPet';
+@import './components/modal';
+@import './components/hamburger';
+
+//Layouts
+@import './layouts/layouts';

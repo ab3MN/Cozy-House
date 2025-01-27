@@ -1,0 +1,62 @@
+/*Burger*/
+@media (max-width: 767px) {
+  .header__navigation {
+    position: fixed;
+    width: 320px;
+    height: 100vh;
+    background-color: #292929;
+    margin-top: -30px;
+    right: -320px;
+    transition: all 1s;
+  }
+  .header__navigation.pets_page {
+    background-color: #fff;
+  }
+  .header__navigation.active {
+    right: 0;
+  }
+  .nav {
+    width: 243px;
+    height: 327px;
+    flex-direction: column;
+    padding-top: 248px;
+    margin: 0 auto;
+  }
+  .nav__link {
+    font-size: 3.2em;
+    line-height: 160%;
+    padding-bottom: 40px;
+  }
+  .nav__link > .active::after {
+    top: 35px;
+  }
+
+  .wrapper_header {
+    margin: 0 20px;
+    align-items: stretch;
+  }
+  .header__bgc {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.6);
+  }
+}
+
+.hamburger.active,
+.hamburger.pets_page.active {
+  z-index: 999;
+  transform: translateX(10px) translateY(10px) rotate(90deg);
+}
+.header__bgc.active {
+  display: block;
+}
+
+.hamburger {
+  transition: all 1s;
+  cursor: pointer;
+}

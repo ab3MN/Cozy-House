@@ -1,0 +1,92 @@
+html {
+  @extend %font-prim;
+
+  font-style: normal;
+  font-size: 10px;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %font-add;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  @include media-decstop {
+    padding: 0 5px;
+  }
+}
+
+.button {
+  @extend %font-add;
+  @include font(1.7rem, 1.2);
+  border-radius: 100px;
+  color: $color-dark-3xl;
+  letter-spacing: 0.06em;
+  background: none;
+  width: 187px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_colored {
+  background-color: $color-primary;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+.button_bordered {
+  border: 2px solid $color-primary;
+
+  &:hover {
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+}
+
+h2 {
+  @extend %section-title;
+}
+.icon__button {
+  @extend %round-button;
+  &:hover {
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+  &:disabled {
+    pointer-events: none;
+    border: 2px solid $color-dark-s;
+    .arrow__path {
+      filter: invert(58%) sepia(100%) saturate(1%) hue-rotate(67deg)
+        brightness(116%) contrast(97%);
+    }
+  }
+  @include media-decstop {
+    margin: 0 10px;
+  }
+  @include media-tablet {
+    margin: 0;
+  }
+  &.pets_page {
+    @include media-decstop {
+      margin: 0;
+    }
+  }
+}
+.pets_count {
+  @extend %round-button;
+  background-color: $color-primary;
+}

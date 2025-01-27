@@ -1,0 +1,29 @@
+%transition {
+  transition: all 0.3s ease-out;
+}
+%font-prim {
+  font-family: 'Arial', Verdana, sans-serif;
+}
+
+%font-add {
+  font-family: 'Georgia', Verdana, sans-serif;
+}
+
+%section-title {
+  @include font(3.5em, 130%);
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+%round-button {
+  padding: 16px 17px;
+  border-radius: 50%;
+  color: $color-dark-3xl;
+  border: 2px solid $color-primary;
+  background: none;
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

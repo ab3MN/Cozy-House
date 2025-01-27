@@ -1,0 +1,225 @@
+.pets {
+  background-color: $color-light-l;
+  padding-bottom: 105px;
+  @include media-tablet {
+    padding-bottom: 100px;
+  }
+  @include media-mobile-L {
+    padding-bottom: 43px;
+  }
+}
+
+.pets__title {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 81px 0 60px;
+  @include media-tablet {
+    padding: 80px 0 58px;
+  }
+  @include media-mobile-L {
+    max-width: 300px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: auto;
+    letter-spacing: 0.06em;
+    padding: 40px 0 45px;
+  }
+}
+.pets__content {
+  display: flex;
+  align-items: center;
+
+  @include media-tablet {
+    max-width: 708px;
+    margin: 0 auto;
+  }
+  @include media-tablet-S {
+    justify-content: space-around;
+  }
+  @include media-mobile-XL {
+    flex-direction: column;
+  }
+}
+
+.mobile__slider--button {
+  display: none;
+
+  @include media-mobile-XL {
+    width: 187px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 40px;
+    &.icon__button {
+      margin: 0;
+    }
+  }
+}
+
+.pets__slider {
+  max-width: 990px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+
+  @include media-laptop {
+    padding: 0 10px 55px;
+    justify-content: space-around;
+  }
+
+  @include media-tablet {
+    max-width: 630px;
+    column-gap: 40px;
+    padding-bottom: 60px;
+  }
+  @include media-mobile-L {
+    padding-bottom: 60px;
+  }
+}
+
+.pets__item {
+  @extend %transition;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-light-xl;
+  }
+  & button {
+    margin-bottom: 30px;
+    @include media-mobile-L {
+      margin-bottom: 25px;
+    }
+  }
+}
+.pets__slider.main_page {
+  @include media-tablet-S {
+    max-width: 330px;
+    margin: 0 20px;
+  }
+  @include media-mobile {
+    padding-bottom: 7px;
+  }
+}
+
+.pets__name {
+  @include font(2em, 2.3em);
+  letter-spacing: 0.06em;
+  padding: 14px 0 18px;
+  color: $color-dark-l;
+  @include media-tablet {
+    padding: 16px 0 19px;
+  }
+  @include media-mobile-s {
+    padding: 15px 0 18px;
+  }
+}
+.pets_wrapper {
+  > .button_colored {
+    width: 262px;
+    margin: 0 auto;
+  }
+}
+//MAIN PAGE
+.pets__item.main_page {
+  @include media-laptop {
+    &:last-child {
+      display: none;
+    }
+  }
+  @include media-tablet-S {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+.icon__button.main_page {
+  @include media-mobile-XL {
+    display: none;
+  }
+}
+
+//PETS PAGE
+.pets.pets_page {
+  padding-bottom: 100px;
+  @include media-tablet {
+    padding-bottom: 78px;
+  }
+  @include media-mobile {
+    padding-bottom: 44px;
+  }
+}
+.pets__title.pets_page {
+  padding: 80px 0 60px;
+  @include media-tablet {
+    padding: 80px 0 28px;
+  }
+  @include media-mobile {
+    padding: 40px 0 40px;
+  }
+}
+.pets__slider.pets_page {
+  max-width: 1200px;
+  row-gap: 33px;
+  @include media-laptop {
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 20px;
+    padding-bottom: 40px;
+  }
+  @include media-tablet {
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 40px;
+    padding-bottom: 40px;
+  }
+  @include media-mobile {
+    max-width: 300px;
+    padding-bottom: 40px;
+    row-gap: 35px;
+    padding-bottom: 47px;
+  }
+}
+.pets__name.pets_page {
+  @include media-tablet {
+    padding: 16px 0 19px;
+  }
+}
+.pets__item.pets_page {
+  @include media-tablet {
+    &:last-child,
+    &:nth-child(7) {
+      display: none;
+    }
+  }
+  @include media-mobile {
+    &:nth-child(6),
+    &:nth-child(5),
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+}
+.icon__button.pets_prev,
+.icon__button.pets_prev-long {
+  transform: rotate(180deg);
+}
+.pets_count {
+  @extend %font-add;
+  @include font(2rem, 115%);
+  letter-spacing: 0.06em;
+}
+.pets__buttons {
+  width: 340px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include media-mobile {
+    width: 300px;
+  }
+}

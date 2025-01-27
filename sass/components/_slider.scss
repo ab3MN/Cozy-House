@@ -1,0 +1,69 @@
+.carousel__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+.carousel,
+.item {
+  display: flex;
+}
+.carousel-wrapper {
+  width: 92.8%;
+  margin: 0 20px;
+  overflow: hidden;
+}
+.carousel {
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  padding: 40px 0 60px;
+  gap: 90px;
+  position: relative;
+  left: -1060px;
+  @include media-mobile-L {
+    left: -715px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 90px;
+}
+.card.activated {
+  background: #ccc;
+}
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1056px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1060px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1s;
+}
+
+.hidden {
+  display: none;
+}
